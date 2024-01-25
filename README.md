@@ -6,7 +6,7 @@ tighter cleaning.
 
 ## Configuration
 
-The configuration files should be mounted to `/config/' directory.
+The configuration files should be mounted to `/config/` directory.
 
 ### `/config/env-variables`
 
@@ -18,7 +18,7 @@ export CLEAN_S3_BASE_URI="name-of-the-bucket"
 # Maximum age of the objects in hours. Older objects will be deleted.
 export CLEAN_S3_MAX_AGE="3"
 # How often the cleaning is run. Given in seconds.
-export CLEAN_S3_CYCL#_SECONDS="3600"
+export CLEAN_S3_CYCLE_SECONDS="3600"
 ```
 
 If the S3 storage requires configuration, set also the path to your S3
@@ -31,7 +31,7 @@ export FSSPEC_CONFIG_DIR="/config/"
 
 See
 https://filesystem-spec.readthedocs.io/en/latest/features.html#configuration
-for the configuration.
+for the S3 access configuration.
 
 The S3 credentials should be injected as environment variables and not
 written to the config file.
