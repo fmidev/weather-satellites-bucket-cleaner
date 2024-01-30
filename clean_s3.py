@@ -37,5 +37,6 @@ def main():
     elapsed = time.time() - tic
     print(dt.datetime.now(dt.timezone.utc), f"- {num} objects deleted in {elapsed:.1f} seconds")
 
+
 if __name__ == "__main__":
     main()
