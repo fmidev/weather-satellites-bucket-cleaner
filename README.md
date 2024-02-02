@@ -1,5 +1,9 @@
 # Container recipe to clean S3 buckets
 
+This recipe is automatically built on new version tags, and the image
+is available from
+https://quay.io/repository/fmi/weather-satellites-bucket-cleaner
+
 The shortest cleaning cycle S3 supports is once-per-day. This
 container can be used to clean S3 buckets with shorter cycle and
 tighter cleaning.
