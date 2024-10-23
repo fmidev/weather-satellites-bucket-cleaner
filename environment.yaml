@@ -1,6 +1,6 @@
 channels:
   - conda-forge
 dependencies:
-  - aiohttp>=3.9.4
-  - python=3.11
+  - aiohttp>=3.10.2
+  - python=3.12
   - s3fs>=2022.8.2
