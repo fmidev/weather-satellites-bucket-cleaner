@@ -14,7 +14,7 @@ def main():
     now = dt.datetime.now(dt.timezone.utc)
     max_age = now - dt.timedelta(hours=int(sys.argv[2]))
 
-    print(now, "- Start cleaning", base_uri)
+    print(now, "- Start cleaning", base_uri, flush=True)
 
     s3 = S3FileSystem()
 
@@ -23,7 +23,9 @@ def main():
         num = _check_age_and_delete_objects(s3, prefix, objects, max_age)
 
     elapsed = time.time() - tic
-    print(dt.datetime.now(dt.timezone.utc), f"- {num} objects deleted in {elapsed:.1f} seconds")
+    print(dt.datetime.now(dt.timezone.utc),
+          f"- {num} objects deleted in {elapsed:.1f} seconds",
+          flush=True)
 
 
 def _check_age_and_delete_objects(s3, prefix, objects, max_age):
@@ -49,7 +51,7 @@ def _get_age(modified):
 
 
 def _delete_object(s3, uri, age):
-    print(f"Delete {uri} - {age}")
+    print(f"Delete {uri} - {age}", flush=True)
     s3.delete(uri)
 
 
