@@ -19,6 +19,7 @@ def main():
     s3 = S3FileSystem()
 
     tic = time.time()
+    num = 0
     for prefix, sub_prefixes, objects in s3.walk(base_uri):
         num = _check_age_and_delete_objects(s3, prefix, objects, max_age)
 
