@@ -34,6 +34,4 @@ COPY --from=builder /usr/bin/micromamba /usr/bin/
 COPY --from=builder /config /config
 COPY entrypoint.sh /usr/bin/
 
-USER 1001
-
 ENTRYPOINT ["/usr/bin/entrypoint.sh"]
