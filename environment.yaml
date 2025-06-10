@@ -2,6 +2,6 @@ channels:
   - conda-forge
 dependencies:
   - aiohttp>=3.10.2
-  - botocore<1.36
+  - botocore
   - python=3.12
   - s3fs>=2025.3.0
