@@ -3,5 +3,5 @@ channels:
 dependencies:
   - aiohttp>=3.10.2
   - botocore
-  - python=3.12
+  - python=3.13
   - s3fs>=2025.3.0
