@@ -3,5 +3,6 @@ channels:
 dependencies:
   - aiohttp>=3.13.2
   - botocore
+  - certifi
   - python=3.13
   - s3fs>=2026.4.0
