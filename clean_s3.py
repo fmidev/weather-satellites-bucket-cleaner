@@ -20,8 +20,11 @@ def main():
 
     tic = time.time()
     num = 0
+    # s3.walk() recurses into sub-prefixes at any depth by default (no
+    # maxdepth is set), so this covers the whole bucket structure regardless
+    # of how deeply nested the directories are.
     for prefix, sub_prefixes, objects in s3.walk(base_uri):
-        num = _check_age_and_delete_objects(s3, prefix, objects, max_age)
+        num += _check_age_and_delete_objects(s3, prefix, objects, max_age)
 
     elapsed = time.time() - tic
     print(dt.datetime.now(dt.timezone.utc),
